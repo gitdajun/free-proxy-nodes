@@ -30,17 +30,47 @@
 
 ---
 
+## 自动更新（GitHub Actions）
+
+本仓库已配置定时更新工作流：
+
+- **每天自动运行**一次（UTC 02:00 ≈ 北京时间 10:00）
+- 也支持在 GitHub 页面手动点击 **Actions → Update Free Nodes → Run workflow** 触发
+
+### 如何启用真正的节点拉取
+
+1. 编辑 `scripts/update_subscriptions.py`
+2. 在 `SOURCES` 列表中添加你信任的公开免费订阅源，例如：
+
+```python
+SOURCES = [
+    ("clash.txt", "https://your-public-source/clash"),
+    ("v2ray.txt", "https://your-public-source/v2ray"),
+]
+```
+
+3. 提交后，Actions 会自动按计划拉取并更新文件。
+
+> 默认不内置任何具体免费源，避免写入失效或违规链接。请自行添加合法公开源。
+
+---
+
 ## 目录结构
 
 ```
 ├── README.md
-├── subscriptions/          # 订阅链接文件
+├── LICENSE
+├── update.log
+├── .github/workflows/
+│   └── update-nodes.yml      # 定时更新工作流
+├── scripts/
+│   └── update_subscriptions.py
+├── subscriptions/
 │   ├── clash.txt
 │   ├── v2ray.txt
 │   └── mixed.txt
-├── nodes/                  # 节点示例（可选）
-│   └── example.yaml
-└── update.log              # 更新记录
+└── nodes/
+    └── example.yaml
 ```
 
 ---
@@ -48,8 +78,8 @@
 ## 更新说明
 
 - 免费节点存活时间通常很短（几小时到几天）
-- 建议每天检查一次订阅是否可用
-- 本仓库会不定期同步公开渠道的节点，但不保证实时性
+- 建议客户端开启「自动更新订阅」
+- 本仓库通过 Actions 定期检查，但不保证节点实时可用
 
 ---
 
@@ -76,4 +106,4 @@
 
 ## License
 
-本仓库内容以学习交流为目的公开，无特殊授权声明。
+MIT License
