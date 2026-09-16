@@ -1,0 +1,11 @@
+# 混合协议免费订阅链接整理
+# 支持 Clash / V2Ray / Shadowsocks 等多种格式
+
+# 以下为公开渠道示例（请自行替换为最新可用链接）
+# https://example.com/mixed-free-1
+# https://example.com/mixed-free-2
+
+# 使用建议：
+# 1. 优先选择支持「自动测速」和「自动切换」的客户端
+# 2. 免费节点请勿存放重要账号密码
+# 3. 定期清理失效节点
