@@ -1,0 +1,11 @@
+# V2Ray / VMess / VLESS 免费订阅链接整理
+# 使用方法：复制链接到 V2RayN / v2rayNG / Shadowrocket 等客户端
+
+# 以下为公开渠道示例（请自行替换为最新可用链接）
+# https://example.com/v2ray-free-1
+# https://example.com/v2ray-free-2
+
+# 注意：
+# - 免费节点存活时间通常很短
+# - 建议开启「自动更新订阅」
+# - 请勿用于违法用途
